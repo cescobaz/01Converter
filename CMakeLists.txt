@@ -12,7 +12,7 @@ find_package(Qt5Core)
 find_package(Qt5Gui)
 find_package(Qt5Widgets)
 
-set(SOURCE_FILES main.cpp Model/Number.cpp Model/Number.h Presentation/MainWindow.cpp Presentation/MainWindow.h Presentation/Keyboards/Keyboard.cpp Presentation/Keyboards/Keyboard.h Presentation/Labels/Label.cpp Presentation/Labels/Label.h)
+set(SOURCE_FILES main.cpp Model/Number.cpp Model/Number.h Presentation/MainWindow.cpp Presentation/MainWindow.h Presentation/Keyboards/Keyboard.cpp Presentation/Keyboards/Keyboard.h Presentation/Labels/Label.cpp Presentation/Labels/Label.h Presentation/Labels/CharLabel.cpp Presentation/Labels/CharLabel.h)
 add_executable(01Converter ${SOURCE_FILES})
 
 # Use the Widgets module from Qt 5.

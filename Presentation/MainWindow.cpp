@@ -4,6 +4,7 @@
 
 #include "MainWindow.h"
 
+#include "Labels/CharLabel.h"
 #include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -61,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(label, SIGNAL(selected()), this, SLOT(labelSelected()));
     row->layout()->addWidget(label);
 
-    label = new Label(2);
+    label = new CharLabel();
     _labels["Char"] = label;
     connect(label, SIGNAL(selected()), this, SLOT(labelSelected()));
     row->layout()->addWidget(label);

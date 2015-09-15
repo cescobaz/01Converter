@@ -51,15 +51,17 @@ Keyboard::Keyboard(int base, int columns, QWidget *parent)
     for (int v = 0; v < elementsCount; ++v) {
         char c;
         if (v < 9) {
-            c = '0' + v + 1;
+            c = '0' + v;
         }
         else {
-            c = 'A' + v - 10 + 1;
+            c = 'A' + v - 10;
+        }
+        if (base != 2) {
+            c++; // do not start with '0'
         }
 
-
         QString value;
-        if (v + 1 >= base) {
+        if ((base == 2 && v + 1 > base) || (base != 2 && v + 1 >= base)) {
             if (column + 1 == columns) {
                 value = QString("delete");
             }
